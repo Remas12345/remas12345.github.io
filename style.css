@@ -1,0 +1,61 @@
+
+body{
+margin:0;
+font-family:Arial;
+background:#0a0f0d;
+color:#e5e7eb;
+text-align:center;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+padding:20px;
+background:#0d1411;
+}
+
+.logo{
+color:#22c55e;
+font-weight:bold;
+}
+
+.lang button{
+background:#22c55e;
+border:none;
+padding:8px 12px;
+margin:0 5px;
+cursor:pointer;
+border-radius:6px;
+font-weight:bold;
+}
+
+.hero{
+padding:80px;
+}
+
+.hero h1{
+font-size:50px;
+}
+
+.contact-top a{
+display:inline-block;
+margin:10px;
+padding:8px 14px;
+border:1px solid #22c55e;
+color:#22c55e;
+border-radius:8px;
+text-decoration:none;
+}
+
+section{
+padding:40px;
+max-width:800px;
+margin:auto;
+}
+
+.card{
+background:#111817;
+padding:20px;
+margin-top:20px;
+border-radius:10px;
+}

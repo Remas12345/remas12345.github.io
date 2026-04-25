@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Remas Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+<div class="logo">Remas</div>
+
+<div class="lang">
+<button onclick="setLang('en')">EN</button>
+<button onclick="setLang('ar')">AR</button>
+</div>
+
+</nav>
+
+<header class="hero">
+<h1 id="title">Remas Alshahrani</h1>
+<p id="role">Information Systems Graduate</p>
+
+<div class="contact-top">
+<a href="mailto:rr5465648@gmail.com">Email</a>
+<a href="https://www.linkedin.com/in/remas-al-shahrani-277198331">LinkedIn</a>
+<a href="https://github.com/remas12345">GitHub</a>
+</div>
+
+</header>
+
+<section>
+<h2 id="aboutTitle">About</h2>
+<p id="aboutText">
+Information Systems graduate focused on data analysis and visualization.
+</p>
+</section>
+
+<section>
+<h2 id="expTitle">Experience</h2>
+<div class="card" id="expText">
+Co-op Training – King Abdullah Hospital (Jan 2026 – Feb 2026)
+</div>
+</section>
+
+<script>
+
+function applyLang(lang){
+if(lang === 'ar'){
+document.body.dir = "rtl";
+document.getElementById("title").innerText = "ريماس الشهراني";
+document.getElementById("role").innerText = "خريجة نظم معلومات";
+document.getElementById("aboutTitle").innerText = "نبذة";
+document.getElementById("aboutText").innerText = "خريجة نظم معلومات مهتمة بتحليل البيانات وتصورها.";
+document.getElementById("expTitle").innerText = "الخبرة";
+document.getElementById("expText").innerText = "تدريب تعاوني – مستشفى الملك عبدالله (يناير 2026 - فبراير 2026)";
+}
+else{
+document.body.dir = "ltr";
+document.getElementById("title").innerText = "Remas Alshahrani";
+document.getElementById("role").innerText = "Information Systems Graduate";
+document.getElementById("aboutTitle").innerText = "About";
+document.getElementById("aboutText").innerText = "Information Systems graduate focused on data analysis and visualization.";
+document.getElementById("expTitle").innerText = "Experience";
+document.getElementById("expText").innerText = "Co-op Training – King Abdullah Hospital (Jan 2026 – Feb 2026)";
+}
+}
+
+function setLang(lang){
+localStorage.setItem("lang", lang);
+applyLang(lang);
+}
+
+window.onload = function(){
+let saved = localStorage.getItem("lang") || "en";
+applyLang(saved);
+}
+
+</script>
+
+</body>
+</html>
